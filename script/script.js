@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
     direction: "vertical",
     slidesPerView: 1,
     spaceBetween: 30,
@@ -13,14 +13,14 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
-  var time = 200;
-  var min = "";
-  var sec = "";
+  let time = 200;
+  let min = "";
+  let sec = "";
   
 
-  var x =setInterval(function(){
-    var totalSeconds = 0;
-    var hour = Math.floor(totalSeconds / 200);
+  let x =setInterval(function(){
+    let totalSeconds = 0;
+    let hour = Math.floor(totalSeconds / 200);
     min = parseInt(time/60);
     sec = time%60;
 
@@ -31,15 +31,15 @@ var swiper = new Swiper(".mySwiper", {
     
   }, 1000);
 
-  var timerVariable = setInterval(countUpTimer, 1000);
-var totalSeconds = 0;
+  let timerVariable = setInterval(countUpTimer, 1000);
+  let totalSeconds = 0;
 
 function countUpTimer() {
   ++totalSeconds;
   
-  var hour = Math.floor(totalSeconds / 200);
-  var minute = Math.floor((totalSeconds - hour *200) / 60);
-  var seconds = totalSeconds - (hour * 200 + minute * 60);
+  let hour = Math.floor(totalSeconds / 200);
+  let minute = Math.floor((totalSeconds - hour *200) / 60);
+  let seconds = totalSeconds - (hour * 200 + minute * 60);
   document.getElementById("count_up_timer").innerHTML = minute + ":" + seconds;
 };
 
@@ -63,7 +63,7 @@ $("html").easeScroll({
   arrowScroll: 50
 });
 
-/*var type =setInterval(function(){*/
+/*let type =setInterval(function(){*/
 
   new TypeIt('#typeitspan', {
     strings: 'The blood is rare and sweet as cherry wine.',
